@@ -1,5 +1,6 @@
-import HomeImage from '@/public/images/home.jpg';
 import Image from 'next/image';
+
+import HomeImage from '@/public/images/home.jpg';
 
 function HeroImage() {
   return <Image src={HomeImage} alt="Hero image" className="rounded-md" />;

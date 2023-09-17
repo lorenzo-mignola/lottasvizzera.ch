@@ -1,7 +1,9 @@
-import LogoImage from '@/public/images/Ass-ticinese-lotta-svizzera-LOGO-contorno.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useContext } from 'react';
+
+import LogoImage from '@/public/images/Ass-ticinese-lotta-svizzera-LOGO-contorno.png';
+
 import { DrawerContext } from '../util/hooks/DrawerContext';
 
 interface LogoProps {

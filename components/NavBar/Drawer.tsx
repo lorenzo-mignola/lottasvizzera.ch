@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useContext } from 'react';
+
 import { DRAWER_ID } from '../util/constants';
 import { DrawerContext } from '../util/hooks/DrawerContext';
 import Logo from './Logo';
@@ -18,10 +19,10 @@ function Drawer() {
         onChange={() => setDrawerOpen(!drawerOpen)}
       />
       <div className="drawer-content flex flex-col">
-        <div className="w-full navbar">
+        <div className="navbar w-full">
           <MenuIcon id={DRAWER_ID} />
           <Logo />
-          <div className="flex-none hidden lg:block">
+          <div className="hidden flex-none lg:block">
             <ul className="menu menu-horizontal">
               <Pages />
             </ul>
@@ -30,7 +31,7 @@ function Drawer() {
       </div>
       <div className="drawer-side">
         <label htmlFor={DRAWER_ID} className="drawer-overlay" />
-        <ul className="menu p-4 w-80 min-h-full bg-base-200">
+        <ul className="menu min-h-full w-80 bg-base-200 p-4">
           <Pages />
         </ul>
       </div>
