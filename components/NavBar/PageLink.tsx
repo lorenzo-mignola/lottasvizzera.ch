@@ -11,7 +11,7 @@ function PageLink({ href, children }: PropsWithChildren<PageLinkProps>) {
   const { setDrawerOpen } = useContext(DrawerContext);
   return (
     <li className="text-lg font-medium">
-      <Link href={href} onClick={() => setDrawerOpen(false)}>
+      <Link href={`/pages${href}`} onClick={() => setDrawerOpen(false)}>
         {children}
       </Link>
     </li>

@@ -5,7 +5,7 @@ import Drawer from './Drawer';
 
 function Nav() {
   return (
-    <nav className="navbar bg-base-200 sticky top-0 z-50">
+    <nav className="navbar sticky top-0 z-50 bg-base-200">
       <DrawerContextProvider>
         <div className="drawer">
           <Drawer />
