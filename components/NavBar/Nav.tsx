@@ -1,5 +1,6 @@
 'use client';
 
+import LanguageSwitcher from '../ui/LanguageSwitcher';
 import { DrawerContextProvider } from '../util/hooks/DrawerContext';
 import Drawer from './Drawer';
 
@@ -11,6 +12,7 @@ function Nav() {
           <Drawer />
         </div>
       </DrawerContextProvider>
+      <LanguageSwitcher />
     </nav>
   );
 }
