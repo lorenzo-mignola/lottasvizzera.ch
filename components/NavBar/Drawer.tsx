@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useContext } from 'react';
 
-import { DRAWER_ID } from '../util/constants';
-import { DrawerContext } from '../util/hooks/DrawerContext';
+import { DRAWER_ID } from '../../util/constants';
+import { DrawerContext } from '../../util/hooks/DrawerContext';
 import Logo from './Logo';
 import MenuIcon from './MenuIcon';
 import Pages from './Pages';
