@@ -17,8 +17,7 @@ const useLanguage = (defaultLocale: string) => {
     (newLang: string) => {
       const params = new URLSearchParams(searchParams);
       params.set('lang', newLang);
-      const p = `${pathname}?${params.toString()}`;
-      router.push(p);
+      router.push(`${pathname}?${params.toString()}`);
       setCookie(COOKIE_KEY, newLang || defaultLocale, { maxAge: MAX_AGE });
     },
     [searchParams, router, pathname, defaultLocale],
@@ -31,11 +30,6 @@ const useLanguage = (defaultLocale: string) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // set lang on cookies
-  useEffect(() => {
-    setCookie(COOKIE_KEY, lang || defaultLocale, { maxAge: MAX_AGE });
-  }, [defaultLocale, lang]);
 
   return {
     setLanguage,

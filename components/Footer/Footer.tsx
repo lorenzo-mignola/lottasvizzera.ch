@@ -3,12 +3,9 @@ import Link from 'next/link';
 
 import CetraImage from '@/public/images/cetra.png';
 
-import LanguageSwitcher from '../ui/LanguageSwitcher';
-
 function Footer() {
   return (
     <footer className="footer bg-neutral p-10  text-white">
-      <LanguageSwitcher />
       <aside>
         <Link href="https://www.cetra.ch/" target="_blank">
           <Image src={CetraImage} alt="cetra" />
