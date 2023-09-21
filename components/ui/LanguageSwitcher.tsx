@@ -17,7 +17,7 @@ function LanguageSwitcher() {
 
   return (
     <div className="dropdown">
-      <label tabIndex={0} className="btn m-1">
+      <label tabIndex={0} className="btn m-1 border-transparent bg-transparent">
         <span className="flex gap-1">
           <Language />
           {lang.toUpperCase()}

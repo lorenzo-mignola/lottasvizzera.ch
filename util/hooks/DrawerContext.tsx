@@ -1,12 +1,23 @@
-import { createContext, Dispatch, PropsWithChildren, SetStateAction, useMemo, useState } from 'react';
+import { createContext, MutableRefObject, PropsWithChildren, useMemo, useRef } from 'react';
 
-export const DrawerContext = createContext<{ drawerOpen: boolean; setDrawerOpen: Dispatch<SetStateAction<boolean>> }>({
-  drawerOpen: false,
-  setDrawerOpen: () => undefined,
+export const DrawerContext = createContext<{
+  drawer: MutableRefObject<HTMLInputElement | null>;
+  closeDrawer: () => void;
+}>({
+  drawer: { current: null },
+  closeDrawer: () => undefined,
 });
 
 export function DrawerContextProvider({ children }: PropsWithChildren) {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const value = useMemo(() => ({ drawerOpen, setDrawerOpen }), [drawerOpen, setDrawerOpen]);
+  const drawer = useRef<HTMLInputElement | null>(null);
+
+  const closeDrawer = () => {
+    if (drawer.current?.checked) {
+      drawer.current?.click();
+    }
+  };
+
+  const value = useMemo(() => ({ drawer, closeDrawer }), []);
+
   return <DrawerContext.Provider value={value}>{children}</DrawerContext.Provider>;
 }

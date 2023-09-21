@@ -11,10 +11,10 @@ interface LogoProps {
 }
 
 function Logo({ classes = '' }: LogoProps) {
-  const { setDrawerOpen } = useContext(DrawerContext);
+  const { closeDrawer } = useContext(DrawerContext);
   return (
     <Link href="/">
-      <Image src={LogoImage} alt="ATLS Logo" width={100} className={classes} onClick={() => setDrawerOpen(false)} />
+      <Image src={LogoImage} alt="ATLS Logo" width={100} className={classes} onClick={() => closeDrawer()} />
     </Link>
   );
 }

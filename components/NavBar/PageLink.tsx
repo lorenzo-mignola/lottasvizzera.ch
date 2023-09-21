@@ -8,10 +8,10 @@ interface PageLinkProps {
 }
 
 function PageLink({ href, children }: PropsWithChildren<PageLinkProps>) {
-  const { setDrawerOpen } = useContext(DrawerContext);
+  const { closeDrawer } = useContext(DrawerContext);
   return (
-    <li className="text-lg font-medium">
-      <Link href={`/pages${href}`} onClick={() => setDrawerOpen(false)}>
+    <li className="rounded-btn my-2 border-2 border-secondary text-lg font-medium lg:mx-2 lg:my-0 ">
+      <Link href={`/pages${href}`} onClick={() => closeDrawer()}>
         {children}
       </Link>
     </li>
