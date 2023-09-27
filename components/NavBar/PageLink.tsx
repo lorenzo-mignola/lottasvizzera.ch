@@ -29,7 +29,7 @@ function PageLink({ href, id }: PropsWithChildren<PageLinkProps>) {
 
   const pageHref = `/pages${href}?lang=${lang}`;
 
-  const selected = pageHref.startsWith(pathname);
+  const selected = pathname !== '/' && pageHref.startsWith(pathname);
 
   return (
     <li className="rounded-btn my-2 text-lg font-medium lg:mx-2 lg:my-0">
