@@ -7,8 +7,8 @@ function Pages() {
       <li>
         <Logo classes="lg:hidden" />
       </li>
-      <PageLink href="/documents">Documenti</PageLink>
-      <PageLink href="/contacts">Contatti</PageLink>
+      <PageLink href="/documents" id="documents" />
+      <PageLink href="/contacts" id="contacts" />
     </>
   );
 }
