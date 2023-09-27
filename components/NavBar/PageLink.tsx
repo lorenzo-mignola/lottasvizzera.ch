@@ -27,14 +27,14 @@ function PageLink({ href, id }: PropsWithChildren<PageLinkProps>) {
 
   const lang = searchParams.get('lang') || 'it';
 
-  const pageHref = `/pages${href}`;
+  const pageHref = `/pages${href}?lang=${lang}`;
 
-  const selected = pageHref === pathname;
+  const selected = pageHref.startsWith(pathname);
 
   return (
     <li className="rounded-btn my-2 text-lg font-medium lg:mx-2 lg:my-0">
       <Link
-        href={`/pages${href}`}
+        href={pageHref}
         onClick={() => closeDrawer()}
         className={selected ? 'bg-base-300 font-semibold text-base-content' : 'text-base-content'}
       >
