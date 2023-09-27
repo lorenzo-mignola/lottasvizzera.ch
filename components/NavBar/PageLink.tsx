@@ -37,6 +37,7 @@ function PageLink({ href, id }: PropsWithChildren<PageLinkProps>) {
         href={pageHref}
         onClick={() => closeDrawer()}
         className={selected ? 'bg-base-300 font-semibold text-base-content' : 'text-base-content'}
+        prefetch={false}
       >
         {LOCALE[lang as NavLocale][id]}
       </Link>
