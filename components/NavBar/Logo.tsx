@@ -4,17 +4,17 @@ import { useContext } from 'react';
 
 import LogoImage from '@/public/images/Ass-ticinese-lotta-svizzera-LOGO-contorno.png';
 
-import { DrawerContext } from '../util/hooks/DrawerContext';
+import { DrawerContext } from '../../util/hooks/DrawerContext';
 
 interface LogoProps {
   classes?: string;
 }
 
 function Logo({ classes = '' }: LogoProps) {
-  const { setDrawerOpen } = useContext(DrawerContext);
+  const { closeDrawer } = useContext(DrawerContext);
   return (
     <Link href="/">
-      <Image src={LogoImage} alt="ATLS Logo" width={100} className={classes} onClick={() => setDrawerOpen(false)} />
+      <Image src={LogoImage} alt="ATLS Logo" width={100} className={classes} onClick={() => closeDrawer()} />
     </Link>
   );
 }

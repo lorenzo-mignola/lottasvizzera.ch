@@ -1,5 +1,7 @@
+import { TextHeader } from '../../../components/ui/TextHeader';
+
 function Documents() {
-  return <div>Documents</div>;
+  return <TextHeader>Documenti</TextHeader>;
 }
 
 export default Documents;
