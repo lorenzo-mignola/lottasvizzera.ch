@@ -2,7 +2,6 @@
   "locales": ["it", "de"],
   "defaultLocale": "it",
   "pages": {
-    "*": [],
-    "/": ["home"]
+    "*": ["documents", "contacts", "home"]
   }
 }

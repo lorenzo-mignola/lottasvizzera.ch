@@ -1,7 +1,10 @@
+import useTranslation from 'next-translate/useTranslation';
+
 import { TextHeader } from '../../../components/ui/TextHeader';
 
 function Documents() {
-  return <TextHeader>Documenti</TextHeader>;
+  const { t } = useTranslation('documents');
+  return <TextHeader>{t('title')}</TextHeader>;
 }
 
 export default Documents;
