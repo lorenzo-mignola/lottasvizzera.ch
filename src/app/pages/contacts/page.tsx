@@ -14,8 +14,7 @@ function Contacts() {
           email="dipietro.loris@gmail.com"
           name="Loris Di Pietro"
           phone="+41 78 896 16 02"
-          size="large"
-          title="Presidente"
+          title={t("president")}
         />
         <ContactsCard
           action
@@ -23,8 +22,7 @@ function Contacts() {
           email="crotta@bluewin.ch"
           name="Ruth Crotta"
           phone="+41 91 857 80 68"
-          size="large"
-          title="Segretaria"
+          title={t("secretary")}
         />
         <ContactsCard
           action
@@ -32,19 +30,18 @@ function Contacts() {
           email="robcrotta@gmail.com"
           name="Robin Crotta"
           phone="+41 77 419 29 81"
-          size="large"
-          title="Responsabile tecnico"
+          title={t("technial")}
         />
       </div>
       <div className="divider" />
       <h2>Comitato</h2>
 
       <div className="grid grid-cols-[repeat(auto-fit,_minmax(18rem,_1fr))] gap-2">
-        <ContactsCard name="Loris Di Pietro" title="Presidente" />
-        <ContactsCard name="Aurelio Vizzardi" title="Vice presidente" />
-        <ContactsCard name="Ruth Crotta" title="Segretaria" />
-        <ContactsCard name="Robin Crotta" title="Responsabile tecnico" />
-        <ContactsCard name="Oscar Facchini" title="Revisore" />
+        <ContactsCard name="Loris Di Pietro" title={t("president")} />
+        <ContactsCard name="Aurelio Vizzardi" title={t("vicePresident")} />
+        <ContactsCard name="Ruth Crotta" title={t("secretary")} />
+        <ContactsCard name="Robin Crotta" title={t("technical")} />
+        <ContactsCard name="Oscar Facchini" title={t("reviewer")} />
       </div>
     </>
   );

@@ -1,3 +1,9 @@
 {
-  "title": "Kontakte"
+  "title": "Kontakte",
+  "president": "Präsident",
+  "vicePresident": "Vizepräsident",
+  "secretary": "Kassier ",
+  "technical": "Techn. Leiter",
+  "reviewer": "Beisitzer ",
+  "cta": "Kontakt"
 }

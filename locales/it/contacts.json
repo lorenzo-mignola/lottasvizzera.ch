@@ -1,3 +1,9 @@
 {
-  "title": "Contatti"
+  "title": "Contatti",
+  "president": "Presidente",
+  "vicePresident": "Vice presidente",
+  "secretary": "Segretaria",
+  "technical": "Responsabile tecnico",
+  "reviewer": "Revisore",
+  "cta": "Contatta"
 }

@@ -1,3 +1,5 @@
+import useTranslation from "next-translate/useTranslation";
+import Link from "next/link";
 import { Address } from "../icons/address";
 import { Email } from "../icons/email";
 import { Phone } from "../icons/phone";
@@ -9,7 +11,6 @@ interface ContactsCardProps {
   phone?: string;
   address?: string;
   action?: boolean;
-  size?: "small" | "large";
 }
 
 export function ContactsCard({
@@ -19,14 +20,10 @@ export function ContactsCard({
   phone,
   address,
   action = false,
-  size = "small",
 }: ContactsCardProps) {
+  const { t } = useTranslation("contacts");
   return (
-    <div
-      className={`card w-full border border-neutral bg-base-100 shadow-sm ${
-        size === "small" ? "lg:w-72" : "lg:w-96"
-      }`}
-    >
+    <div className="card w-full border border-neutral bg-base-100 shadow-sm">
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <h3>{name}</h3>
@@ -48,11 +45,13 @@ export function ContactsCard({
             {address}
           </p>
         ) : null}
-        {action ? (
+        {action && email ? (
           <div className="card-actions justify-end">
-            <button className="btn btn-neutral" type="button">
-              Contatta
-            </button>
+            <Link href={`mailto:${email}`}>
+              <button className="btn btn-neutral" type="button">
+                {t("cta")}
+              </button>
+            </Link>
           </div>
         ) : null}
       </div>
