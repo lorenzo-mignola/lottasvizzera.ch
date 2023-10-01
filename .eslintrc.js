@@ -1,4 +1,4 @@
-const { resolve } = require("path");
+const { resolve } = require("node:path");
 
 const project = resolve(__dirname, "tsconfig.json");
 
@@ -23,7 +23,7 @@ module.exports = {
   overrides: [
     // Next.js needs default exports for pages and API points
     {
-      files: ["page.tsx", "layout.tsx"],
+      files: ["page.tsx", "layout.tsx", "tailwind.config.ts"],
       rules: {
         "import/no-default-export": "off",
       },

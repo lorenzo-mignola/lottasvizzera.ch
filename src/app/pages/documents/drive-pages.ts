@@ -1,4 +1,4 @@
-import type { Languages } from "../../../types/languages";
+import type { Languages } from "@/types/languages";
 
 export const years = [
   "2016",

@@ -1,7 +1,7 @@
-import { DRAWER_ID } from "../../util/constants";
 import { Logo } from "./logo";
 import { MenuIcon } from "./menu-icon";
 import { Pages } from "./pages";
+import { DRAWER_ID } from "@/util/constants";
 
 export function DrawerMd() {
   return (

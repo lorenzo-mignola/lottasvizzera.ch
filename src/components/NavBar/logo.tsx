@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useContext } from "react";
-import { DrawerContext } from "../../util/hooks/DrawerContext";
+import { DrawerContext } from "@/util/hooks/DrawerContext";
 import LogoImage from "@/public/images/Ass-ticinese-lotta-svizzera-LOGO-contorno.png";
 
 interface LogoProps {

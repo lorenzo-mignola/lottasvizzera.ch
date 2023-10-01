@@ -2,6 +2,9 @@
   "locales": ["it", "de"],
   "defaultLocale": "it",
   "pages": {
-    "*": ["documents", "contacts", "home"]
+    "/": ["home"],
+    "/pages/documents": ["documents"],
+    "/pages/documents/[year]": ["documents"],
+    "/pages/contacts": ["contacts"]
   }
 }

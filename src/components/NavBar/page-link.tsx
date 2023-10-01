@@ -2,9 +2,9 @@ import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import type { PropsWithChildren } from "react";
 import { useContext } from "react";
-import NAV_DE from "../../locales/de/nav";
-import NAV_IT from "../../locales/it/nav";
-import { DrawerContext } from "../../util/hooks/DrawerContext";
+import NAV_DE from "@/locales/de/nav";
+import NAV_IT from "@/locales/it/nav";
+import { DrawerContext } from "@/util/hooks/DrawerContext";
 
 const LOCALE = {
   it: NAV_IT,

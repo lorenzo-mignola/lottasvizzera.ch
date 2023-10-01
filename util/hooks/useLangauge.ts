@@ -1,7 +1,7 @@
 import { getCookie, hasCookie, setCookie } from "cookies-next";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect } from "react";
-import { COOKIE_KEY } from "../constants";
+import { COOKIE_KEY } from "@/util/constants";
 
 const MAX_AGE = 100 * 24 * 60 * 60 * 1000;
 

@@ -2,8 +2,8 @@
 
 "use client";
 
-import type { Languages } from "../../types/languages";
-import { Language } from "../icons/language";
+import { Language } from "@components/icons/language";
+import type { Languages } from "@/types/languages";
 import { useLanguage } from "@/util/hooks/useLangauge";
 
 export function LanguageSwitcher() {

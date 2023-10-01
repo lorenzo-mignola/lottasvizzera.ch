@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control -- label is used for drawer open */
 
-import { DRAWER_ID } from "../../util/constants";
 import { Pages } from "./pages";
+import { DRAWER_ID } from "@/util/constants";
 
 export function DrawerLg() {
   return (
