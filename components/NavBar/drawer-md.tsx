@@ -1,9 +1,9 @@
-import { DRAWER_ID } from '../../util/constants';
-import Logo from './Logo';
-import MenuIcon from './MenuIcon';
-import Pages from './Pages';
+import { DRAWER_ID } from "../../util/constants";
+import { Logo } from "./logo";
+import { MenuIcon } from "./menu-icon";
+import { Pages } from "./pages";
 
-function DrawerMd() {
+export function DrawerMd() {
   return (
     <div className="drawer-content flex flex-col">
       <div className="navbar w-full">
@@ -18,5 +18,3 @@ function DrawerMd() {
     </div>
   );
 }
-
-export default DrawerMd;

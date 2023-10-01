@@ -1,7 +1,7 @@
-import HeroImage from './HeroImage';
-import HeroText from './HeroText';
+import { HeroImage } from "./hero-image";
+import { HeroText } from "./hero-text";
 
-function HeroMd() {
+export function HeroMd() {
   return (
     <div className="hero min-h-screen lg:hidden">
       <div className="hero-content flex-col lg:flex-row">
@@ -11,5 +11,3 @@ function HeroMd() {
     </div>
   );
 }
-
-export default HeroMd;

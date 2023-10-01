@@ -1,7 +1,7 @@
-import Logo from './Logo';
-import PageLink from './PageLink';
+import { Logo } from "./logo";
+import { PageLink } from "./page-link";
 
-function Pages() {
+export function Pages() {
   return (
     <>
       <li>
@@ -12,5 +12,3 @@ function Pages() {
     </>
   );
 }
-
-export default Pages;

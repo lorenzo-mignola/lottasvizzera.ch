@@ -1,40 +1,49 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
+import CetraImage from "@/public/images/cetra.png";
 
-import CetraImage from '@/public/images/cetra.png';
-
-function Footer() {
+export function Footer() {
   return (
     <footer className="footer bg-neutral p-10  text-white">
       <aside>
         <Link href="https://www.cetra.ch/" target="_blank">
-          <Image src={CetraImage} alt="cetra" />
+          <Image alt="cetra" src={CetraImage} />
         </Link>
       </aside>
       <nav>
         <header className="footer-title">Link</header>
-        <Link href="https://esv.ch/" target="_blank" className="link-hover link">
+        <Link
+          className="link-hover link"
+          href="https://esv.ch/"
+          target="_blank"
+        >
           ESV
         </Link>
-        <Link href="https://isv.ch/" target="_blank" className="link-hover link">
+        <Link
+          className="link-hover link"
+          href="https://isv.ch/"
+          target="_blank"
+        >
           ISV
         </Link>
         <Link
+          className="link-hover link"
           href="https://www.jugendundsport.ch/it/sportarten/schwingen-uebersicht.html"
           target="_blank"
-          className="link-hover link"
         >
           Gioventù+Sport
         </Link>
       </nav>
       <nav>
         <header className="footer-title">Sponsor</header>
-        <Link href="https://cetra.ch/" className="link-hover link" target="_blank">
+        <Link
+          className="link-hover link"
+          href="https://cetra.ch/"
+          target="_blank"
+        >
           Cetra Alimentari SA
         </Link>
       </nav>
     </footer>
   );
 }
-
-export default Footer;
