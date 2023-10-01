@@ -28,5 +28,11 @@ module.exports = {
         "import/no-default-export": "off",
       },
     },
+    {
+      files: ["./util/**/*"],
+      rules: {
+        "unicorn/filename-case": "off",
+      },
+    },
   ],
 };

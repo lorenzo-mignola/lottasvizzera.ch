@@ -2,13 +2,14 @@
 
 "use client";
 
+import type { Languages } from "../../types/languages";
 import { Language } from "../icons/language";
-import useLanguage from "@/util/hooks/useLangauge";
+import { useLanguage } from "@/util/hooks/useLangauge";
 
 export function LanguageSwitcher() {
   const { lang, setLanguage } = useLanguage("it");
 
-  const handleClick = (newLang: string) => {
+  const handleClick = (newLang: Languages) => {
     setLanguage(newLang);
     (document.activeElement as HTMLLabelElement).blur();
   };

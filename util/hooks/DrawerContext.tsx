@@ -1,4 +1,5 @@
-import { createContext, MutableRefObject, PropsWithChildren, useMemo, useRef } from 'react';
+import type { MutableRefObject, PropsWithChildren } from "react";
+import { createContext, useMemo, useRef } from "react";
 
 export const DrawerContext = createContext<{
   drawer: MutableRefObject<HTMLInputElement | null>;
@@ -13,11 +14,13 @@ export function DrawerContextProvider({ children }: PropsWithChildren) {
 
   const closeDrawer = () => {
     if (drawer.current?.checked) {
-      drawer.current?.click();
+      drawer.current.click();
     }
   };
 
   const value = useMemo(() => ({ drawer, closeDrawer }), []);
 
-  return <DrawerContext.Provider value={value}>{children}</DrawerContext.Provider>;
+  return (
+    <DrawerContext.Provider value={value}>{children}</DrawerContext.Provider>
+  );
 }
