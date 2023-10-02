@@ -1,6 +1,8 @@
-const NAV_IT = {
-  documents: 'Documenti',
-  contacts: 'Contatti',
-};
+import type { NavLinks } from "@/types/nav-links";
 
-export default NAV_IT;
+export const NAV_IT: Record<NavLinks, string> = {
+  documents: "Documenti",
+  contacts: "Contatti",
+  history: "Storia",
+  training: "Allenamenti",
+};

@@ -7,8 +7,10 @@ export function Pages() {
       <li>
         <Logo classes="lg:hidden" />
       </li>
-      <PageLink href="/documents" id="documents" />
-      <PageLink href="/contacts" id="contacts" />
+      <PageLink id="documents" />
+      <PageLink id="contacts" />
+      <PageLink id="history" />
+      <PageLink id="training" />
     </>
   );
 }

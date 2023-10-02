@@ -2,32 +2,30 @@ import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import type { PropsWithChildren } from "react";
 import { useContext } from "react";
-import NAV_DE from "@/locales/de/nav";
-import NAV_IT from "@/locales/it/nav";
+import { NAV_DE } from "@/locales/de/nav";
+import { NAV_IT } from "@/locales/it/nav";
 import { DrawerContext } from "@/util/hooks/DrawerContext";
+import type { NavLinks } from "@/types/nav-links";
 
 const LOCALE = {
   it: NAV_IT,
   de: NAV_DE,
 } as const;
 
-type NavLinks = "documents" | "contacts";
-
 interface PageLinkProps {
-  href: string;
   id: NavLinks;
 }
 
 type NavLocale = keyof typeof LOCALE;
 
-export function PageLink({ href, id }: PropsWithChildren<PageLinkProps>) {
+export function PageLink({ id }: PropsWithChildren<PageLinkProps>) {
   const { closeDrawer } = useContext(DrawerContext);
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   const lang = searchParams.get("lang") || "it";
 
-  const pageHref = `/pages${href}?lang=${lang}`;
+  const pageHref = `/pages/${id}?lang=${lang}`;
 
   const selected = pathname !== "/" && pageHref.startsWith(pathname);
 

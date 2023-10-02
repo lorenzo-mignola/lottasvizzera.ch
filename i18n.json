@@ -5,6 +5,8 @@
     "/": ["home"],
     "/pages/documents": ["documents"],
     "/pages/documents/[year]": ["documents"],
-    "/pages/contacts": ["contacts"]
+    "/pages/contacts": ["contacts"],
+    "/pages/history": ["history"],
+    "/pages/training": ["training"]
   }
 }

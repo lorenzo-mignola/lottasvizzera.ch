@@ -7,7 +7,7 @@ function Contacts() {
   return (
     <>
       <TextHeader>{t("title")}</TextHeader>
-      <div className="grid grid-cols-[repeat(auto-fit,_minmax(24rem,_1fr))] gap-2">
+      <div className="grid grid-cols-[repeat(auto-fit,_minmax(24rem,_1fr))] gap-2 pt-2">
         <ContactsCard
           action
           address="6597 Agarone, Via Cà di Sopra 10"
@@ -34,7 +34,7 @@ function Contacts() {
         />
       </div>
       <div className="divider" />
-      <h2>Comitato</h2>
+      <h2 className="pb-1 text-lg font-bold">Comitato</h2>
 
       <div className="grid grid-cols-[repeat(auto-fit,_minmax(18rem,_1fr))] gap-2">
         <ContactsCard name="Loris Di Pietro" title={t("president")} />
