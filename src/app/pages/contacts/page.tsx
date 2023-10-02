@@ -30,7 +30,7 @@ function Contacts() {
           email="robcrotta@gmail.com"
           name="Robin Crotta"
           phone="+41 77 419 29 81"
-          title={t("technial")}
+          title={t("technical")}
         />
       </div>
       <div className="divider" />
@@ -41,7 +41,7 @@ function Contacts() {
         <ContactsCard name="Aurelio Vizzardi" title={t("vicePresident")} />
         <ContactsCard name="Ruth Crotta" title={t("secretary")} />
         <ContactsCard name="Robin Crotta" title={t("technical")} />
-        <ContactsCard name="Oscar Facchini" title={t("reviewer")} />
+        <ContactsCard name="Oscar Facchini" title={t("member")} />
       </div>
     </>
   );

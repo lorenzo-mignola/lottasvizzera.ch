@@ -1,13 +1,13 @@
 import type { Languages } from "@/types/languages";
 
 export const years = [
-  "2016",
-  "2017",
-  "2018",
-  "2019",
-  "2020",
-  "2021",
   "2022",
+  "2021",
+  "2020",
+  "2019",
+  "2018",
+  "2017",
+  "2016",
 ] as const;
 
 export type Years = (typeof years)[number];

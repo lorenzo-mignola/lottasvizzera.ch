@@ -5,7 +5,10 @@ import { Inter } from "next/font/google";
 import { Footer } from "@components/Footer/footer";
 import { Nav } from "@components/NavBar/nav";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  fallback: ["Verdana", "sans-serif"],
+});
 
 export const metadata: Metadata = {
   title: "Associazione ticinese di lotta svizzera",
