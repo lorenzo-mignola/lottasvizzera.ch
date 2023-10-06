@@ -1,5 +1,11 @@
 {
-  "header": "Benvenuti sul sito ufficiale dell'associazione ticinese di lotta Svizzera",
-  "subHeader": "L'associazione ticinese di lotta svizzera (ATLS) è membro dell'Associazione di lotta svizzera della Svizzera centrale (ISV) e dell'Associazione federeale di lotta svizzera (ESV). L'ATLS ha quale scopo la cura, la promozione e la diffusione della lotta svizzera e in questo modo contribuisce alla conservazione degli usi e costumi popolari.",
-  "cta": "Contatti"
+  "header": "La lotta svizzera in Ticino",
+  "section-atls-header": "L'Associazione Ticinese di Lotta Svizzera (ATLS)",
+  "section-atls-body-1": "L'ATLS è l'associazione che rappresenta la lotta svizzera nel Canton Ticino. È membro dell'Associazione di lotta svizzera della Svizzera centrale (ISV) e dell'Associazione federeale di lotta svizzera (ESV).",
+  "section-atls-body-2": "Lo scopo dell'ATLS è la cura, la promozione e la diffusione della lotta svizzera, contribuendo così a conservare gli usi e costumi popolari della Svizzera e del Ticino.",
+  "section-lotta-header": "La lotta svizzera, una tradizione Svizzera",
+  "section-lotta-body-1": "La lotta svizzera è la lotta tipica che si pratica in Svizzera da secoli. È uno sport di forza, tecnica e resistenza, che richiede un'elevata preparazione fisica e mentale.",
+  "section-lotta-body-2": "La lotta svizzera si svolge su cerchio di segatura, dove due lottatori si affrontano uno contro l'altro. L'obiettivo è di far cadere l'avversario a terra, con la schiena a contatto con la segatura.",
+  "cta-secondary": "Contatti",
+  "cta-main": "Scopri"
 }

@@ -6,13 +6,22 @@ export function HeroText() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold lg:text-6xl">{t("header")}</h1>
-      <p className="py-6 lg:text-lg">{t("subHeader")}</p>
-      <Link href={`/pages/contacts?lang=${lang}`}>
-        <button className="btn btn-primary" type="button">
-          {t("cta")}
-        </button>
-      </Link>
+      <h1 className="py-6 text-4xl font-bold lg:text-6xl">{t("header")}</h1>
+      <div className="flex justify-center gap-3">
+        <Link href={`/pages/contacts?lang=${lang}`}>
+          <button
+            className="btn border border-secondary bg-transparent lg:text-white"
+            type="button"
+          >
+            {t("cta-secondary")}
+          </button>
+        </Link>
+        <Link href="#section-atls">
+          <button className="btn btn-primary shadow-md" type="button">
+            {t("cta-main")}
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }
