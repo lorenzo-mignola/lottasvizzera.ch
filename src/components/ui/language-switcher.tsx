@@ -1,51 +1,51 @@
-/* eslint-disable jsx-a11y/no-noninteractive-tabindex -- tab is not used*/
-
 "use client";
 
 import { Language } from "@components/icons/language";
+import { useRef } from "react";
+import { ButtonDropDown } from "./button-dropdown";
 import type { Languages } from "@/types/languages";
 import { useLanguage } from "@/util/hooks/useLangauge";
 
 export function LanguageSwitcher() {
   const { lang, setLanguage } = useLanguage("it");
+  const dropDownRef = useRef<HTMLElement>(null);
 
   const handleClick = (newLang: Languages) => {
     setLanguage(newLang);
-    (document.activeElement as HTMLLabelElement).blur();
+    if (dropDownRef.current) {
+      dropDownRef.current.click();
+    }
   };
 
   return (
-    <div className="dropdown">
-      <label className="btn m-1 border-transparent bg-transparent" tabIndex={0}>
+    <details className="dropdown">
+      <summary
+        className="btn m-1 border-transparent bg-transparent"
+        ref={dropDownRef}
+      >
         <span className="flex gap-1">
           <Language />
           {lang.toUpperCase()}
         </span>
-      </label>
+      </summary>
       <ul className="menu dropdown-content rounded-box right-0 z-[1] bg-base-100 shadow">
-        <li>
-          <button
-            className={lang === "de" ? "font-bold" : ""}
-            onClick={() => {
-              handleClick("de");
-            }}
-            type="button"
-          >
-            DE
-          </button>
-        </li>
-        <li>
-          <button
-            className={lang === "it" ? "font-bold" : ""}
-            onClick={() => {
-              handleClick("it");
-            }}
-            type="button"
-          >
-            IT
-          </button>
-        </li>
+        <ButtonDropDown
+          active={lang === "it"}
+          chip="IT"
+          handleClick={() => {
+            handleClick("it");
+          }}
+          text="Italiano"
+        />
+        <ButtonDropDown
+          active={lang === "de"}
+          chip="DE"
+          handleClick={() => {
+            handleClick("de");
+          }}
+          text="Deutsch"
+        />
       </ul>
-    </div>
+    </details>
   );
 }
