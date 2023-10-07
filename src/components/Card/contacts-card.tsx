@@ -24,7 +24,7 @@ export function ContactsCard({
   const { t } = useTranslation("contacts");
   return (
     <div className="card w-full border border-neutral bg-base-100 shadow-sm">
-      <div className="card-body">
+      <div className="card-body p-5 lg:p-7">
         <h2 className="card-title">{title}</h2>
         <h3>{name}</h3>
         {email ? (
