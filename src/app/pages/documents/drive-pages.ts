@@ -45,7 +45,7 @@ export const documentsPages: DocumentsPages = {
     de: "1MwTl1mxh0b-rYZhtlY2NAxHzyKnal7V8",
   },
   "2023": {
-    it: "1Pb66ClHo-9LMs1GGGDumzEfGtUykizrN",
-    de: "1q40gIqxzJ605F0zYqFYp7e6lK1XYeaYk",
+    it: "1q40gIqxzJ605F0zYqFYp7e6lK1XYeaYk",
+    de: "1Pb66ClHo-9LMs1GGGDumzEfGtUykizrN",
   },
 };
