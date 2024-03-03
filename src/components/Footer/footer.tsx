@@ -4,7 +4,7 @@ import CetraImage from "@/public/images/cetra.png";
 
 export function Footer() {
   return (
-    <footer className="footer bg-neutral-focus p-10 text-neutral-content">
+    <footer className="footer bg-neutral p-10 text-neutral-content">
       <aside>
         <Link href="https://www.cetra.ch/" target="_blank">
           <Image alt="cetra" src={CetraImage} />

@@ -30,7 +30,7 @@ export function PageLink({ id }: PropsWithChildren<PageLinkProps>) {
   const selected = pathname !== "/" && pageHref.startsWith(pathname);
 
   return (
-    <li className="rounded-btn my-2 text-lg font-medium lg:mx-2 lg:my-0">
+    <li className="my-2 rounded-btn text-lg font-medium lg:mx-2 lg:my-0">
       <Link
         className={
           selected

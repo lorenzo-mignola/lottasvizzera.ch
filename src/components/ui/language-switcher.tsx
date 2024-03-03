@@ -20,7 +20,7 @@ export function LanguageSwitcher() {
   return (
     <details className="dropdown">
       <summary
-        className="btn m-1 border-transparent bg-transparent"
+        className="btn m-1 border-transparent bg-transparent shadow-none"
         ref={dropDownRef}
       >
         <span className="flex gap-1">
@@ -28,7 +28,7 @@ export function LanguageSwitcher() {
           {lang.toUpperCase()}
         </span>
       </summary>
-      <ul className="menu dropdown-content rounded-box right-0 z-[1] bg-base-100 shadow">
+      <ul className="menu dropdown-content right-0 z-[1] rounded-box bg-base-100 shadow">
         <ButtonDropDown
           active={lang === "it"}
           chip="IT"

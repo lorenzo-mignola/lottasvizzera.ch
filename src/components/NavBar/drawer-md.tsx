@@ -1,6 +1,7 @@
-import { Logo } from "./logo";
+import { Suspense } from "react";
 import { MenuIcon } from "./menu-icon";
 import { Pages } from "./pages";
+import { Logo } from "./logo";
 import { DRAWER_ID } from "@/util/constants";
 
 export function DrawerMd() {
@@ -8,7 +9,9 @@ export function DrawerMd() {
     <div className="drawer-content flex flex-col">
       <div className="navbar w-full">
         <MenuIcon id={DRAWER_ID} />
-        <Logo />
+        <Suspense>
+          <Logo />
+        </Suspense>
         <div className="hidden flex-none lg:flex">
           <ul className="menu menu-horizontal">
             <Pages />
