@@ -10,14 +10,14 @@ export function HeroText() {
       <div className="flex justify-center gap-3">
         <Link href={`/pages/contacts?lang=${lang}`}>
           <button
-            className="btn border border-secondary bg-transparent lg:text-white"
+            className="btn border border-secondary bg-transparent uppercase lg:text-white"
             type="button"
           >
             {t("cta-secondary")}
           </button>
         </Link>
         <Link href="#section-atls">
-          <button className="btn btn-primary shadow-md" type="button">
+          <button className="btn btn-primary uppercase shadow-md" type="button">
             {t("cta-main")}
           </button>
         </Link>
