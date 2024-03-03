@@ -21,7 +21,7 @@ function Contacts() {
           address="6528 Camorino, Ai Basciòcch 5B"
           email="crotta@bluewin.ch"
           name="Ruth Crotta"
-          phone="+41 91 857 80 68"
+          phone="+41 79 696 91 79"
           title={t("secretary")}
         />
         <ContactsCard
