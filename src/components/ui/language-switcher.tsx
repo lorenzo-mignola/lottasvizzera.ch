@@ -20,7 +20,7 @@ export function LanguageSwitcher() {
   return (
     <details className="dropdown">
       <summary
-        className="btn m-1 border-transparent bg-transparent"
+        className="btn m-1 border-transparent bg-transparent shadow-none"
         ref={dropDownRef}
       >
         <span className="flex gap-1">
