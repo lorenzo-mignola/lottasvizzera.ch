@@ -7,7 +7,7 @@ export function MenuIcon({ id }: MenuIconProps) {
     <div className="mr-1 flex-none lg:hidden">
       <label className="btn btn-square btn-ghost" htmlFor={id}>
         <svg
-          className="inline-block h-6 w-6 stroke-current"
+          className="inline-block size-6 stroke-current"
           fill="none"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"

@@ -28,7 +28,7 @@ export function LanguageSwitcher() {
           {lang.toUpperCase()}
         </span>
       </summary>
-      <ul className="menu dropdown-content rounded-box right-0 z-[1] bg-base-100 shadow">
+      <ul className="menu dropdown-content right-0 z-[1] rounded-box bg-base-100 shadow">
         <ButtonDropDown
           active={lang === "it"}
           chip="IT"
