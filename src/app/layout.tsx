@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Footer } from "@components/Footer/footer";
 import { Nav } from "@components/NavBar/nav";
+import { CookieConsent } from "../components/cookie/cookie-consent";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Nav />
         {children}
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

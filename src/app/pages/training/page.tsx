@@ -1,9 +1,11 @@
 import useTranslation from "next-translate/useTranslation";
 import { TextHeader } from "@components/ui/text-header";
 import Trans from "next-translate/Trans";
+import { Suspense } from "react";
+import { Map } from "./map";
 
 export default function History() {
-  const { t, lang } = useTranslation("training");
+  const { t } = useTranslation("training");
   return (
     <>
       <TextHeader>{t("title")}</TextHeader>
@@ -14,13 +16,11 @@ export default function History() {
           i18nKey="training:body"
         />
       </article>
+
       <div className="mt-5 h-[600px] w-full">
-        <iframe
-          height="100%"
-          src={`https://maps.google.com/maps?&hl=${lang}&q=+(Centro%20Sportivo%20Nazionale%20della%20Giovent%C3%B9)&t=&z=16&ie=UTF8&iwloc=B&output=embed`}
-          title="Centro Sportivo Nazionale della Gioventù"
-          width="100%"
-        />
+        <Suspense>
+          <Map />
+        </Suspense>
       </div>
     </>
   );

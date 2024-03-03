@@ -1,9 +1,7 @@
 import { getCookie, hasCookie, setCookie } from "cookies-next";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect } from "react";
-import { COOKIE_KEY } from "@/util/constants";
-
-const MAX_AGE = 100 * 24 * 60 * 60 * 1000;
+import { COOKIE_KEY, MAX_AGE } from "@/util/constants";
 
 export const useLanguage = (defaultLocale: string) => {
   const router = useRouter();
