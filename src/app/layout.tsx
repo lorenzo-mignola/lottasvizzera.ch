@@ -23,7 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html data-theme="autumn" lang="it">
-      <body className={inter.className}>
+      <body
+        className={`${inter.className} md:flex md:min-h-screen md:flex-col`}
+      >
         <Nav />
         {children}
         <Footer />
