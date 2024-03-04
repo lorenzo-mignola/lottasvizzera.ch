@@ -9,35 +9,16 @@ export function CookieConsent() {
 
   return (
     <CookieConsentBanner
-      buttonStyle={{
-        backgroundColor: "#f1f1f1",
-        fontSize: "16px",
-        borderRadius: "8px",
-        margin: "8px",
-      }}
-      buttonText="Ok"
-      contentStyle={{
-        margin: "8px",
-      }}
+      buttonClasses="!btn !btn-primary !btn-sm !m-1"
+      buttonText="OK"
+      containerClasses="!md:m-2 !md:p-3 !m-1 !w-auto !items-center !rounded-md !bg-base-100  p-2 !text-base-content !opacity-90 !shadow-md"
       cookieName={COOKIE_CONSENT}
-      declineButtonStyle={{
-        borderRadius: "8px",
-        backgroundColor: "transparent",
-        border: "1px solid oklch(var(--bc))",
-        color: "oklch(var(--bc))",
-      }}
+      declineButtonClasses="!btn !btn-sm !m-1"
       declineButtonText={t("decline")}
       enableDeclineButton
       expires={MAX_AGE}
       location="bottom"
-      style={{
-        background: "oklch(var(--b3))",
-        opacity: 0.9,
-        color: "oklch(var(--bc))",
-        alignItems: "center",
-        boxShadow:
-          "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)",
-      }}
+      overlayClasses="!bg-pink-500"
     >
       <div className="flex flex-col">
         <span className="font-bold">{t("cookie-consent-header")}</span>
