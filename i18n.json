@@ -2,11 +2,12 @@
   "locales": ["it", "de"],
   "defaultLocale": "it",
   "pages": {
-    "/": ["home", "cookie"],
-    "/pages/documents": ["documents", "cookie"],
-    "/pages/documents/[year]": ["documents", "cookie"],
-    "/pages/contacts": ["contacts", "cookie"],
-    "/pages/history": ["history", "cookie"],
-    "/pages/training": ["training", "cookie"]
+    "*": ["cookie"],
+    "/": ["home"],
+    "/pages/documents": ["documents"],
+    "/pages/documents/[year]": ["documents"],
+    "/pages/contacts": ["contacts"],
+    "/pages/history": ["history"],
+    "/pages/training": ["training"]
   }
 }

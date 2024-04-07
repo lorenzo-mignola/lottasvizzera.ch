@@ -23,7 +23,13 @@ module.exports = {
   overrides: [
     // Next.js needs default exports for pages and API points
     {
-      files: ["page.tsx", "layout.tsx", "tailwind.config.ts"],
+      files: [
+        "page.tsx",
+        "layout.tsx",
+        "tailwind.config.ts",
+        "not-found.tsx",
+        "error.tsx",
+      ],
       rules: {
         "import/no-default-export": "off",
       },
