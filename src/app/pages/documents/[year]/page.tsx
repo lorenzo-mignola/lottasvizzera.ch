@@ -2,8 +2,10 @@ import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import { TextHeader } from "@components/ui/text-header";
 import { Folder } from "@components/icons/folder";
+import { Suspense } from "react";
 import type { Years } from "../drive-pages";
 import { documentsPages } from "../drive-pages";
+import { DriveDocuments } from "./drive-documents";
 import type { Languages } from "@/types/languages";
 
 interface DocumentYearPage {
@@ -22,6 +24,7 @@ export default function DocumentYearPage({
   const { t } = useTranslation("documents");
   const folderId = documentsPages[year][lang];
   const src = `https://drive.google.com/embeddedfolderview?id=${folderId}#list`;
+
   return (
     <>
       <TextHeader>
@@ -36,12 +39,9 @@ export default function DocumentYearPage({
           <li>{year}</li>
         </ul>
       </div>
-      <iframe
-        className="min-h-[60vh]"
-        src={src}
-        title={`doc-${year}`}
-        width="100%"
-      />
+      <Suspense>
+        <DriveDocuments src={src} year={year} />
+      </Suspense>
     </>
   );
 }

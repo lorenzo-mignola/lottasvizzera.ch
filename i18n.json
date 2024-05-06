@@ -2,6 +2,7 @@
   "locales": ["it", "de"],
   "defaultLocale": "it",
   "pages": {
+    "*": ["cookie"],
     "/": ["home"],
     "/pages/documents": ["documents"],
     "/pages/documents/[year]": ["documents"],

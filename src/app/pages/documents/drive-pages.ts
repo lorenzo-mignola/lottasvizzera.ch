@@ -1,6 +1,7 @@
 import type { Languages } from "@/types/languages";
 
 export const years = [
+  "2024",
   "2023",
   "2022",
   "2021",
@@ -47,5 +48,9 @@ export const documentsPages: DocumentsPages = {
   "2023": {
     it: "1q40gIqxzJ605F0zYqFYp7e6lK1XYeaYk",
     de: "1Pb66ClHo-9LMs1GGGDumzEfGtUykizrN",
+  },
+  "2024": {
+    it: "1PHYYTY18bpxy-v7EWc920Nwf-dovuGvF",
+    de: "170Yb9Dlt1woDTnMnpSdaFfjTBQ2lWZ-e",
   },
 };
