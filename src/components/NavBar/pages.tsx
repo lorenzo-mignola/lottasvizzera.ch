@@ -12,6 +12,7 @@ export function Pages() {
       <PageLink id="history" />
       <PageLink id="training" />
       <PageLink id="documents" />
+      <PageLink id="mat" />
     </Suspense>
   );
 }

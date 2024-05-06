@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { Footer } from "@components/Footer/footer";
 import { Nav } from "@components/NavBar/nav";
 import { CookieConsent } from "../components/cookie/cookie-consent";
+import { AlertNew } from "../components/AlertNew/alert-new";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -42,6 +43,7 @@ export default function RootLayout({
         className={`${inter.className} md:flex md:min-h-screen md:flex-col`}
       >
         <Nav />
+        <AlertNew />
         {children}
         <Footer />
         <CookieConsent />

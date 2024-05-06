@@ -5,4 +5,5 @@ export const NAV_DE: Record<NavLinks, string> = {
   contacts: "Kontakte",
   history: "Geschichte",
   training: "Trainings",
+  mat: "Schwingmatte",
 };
