@@ -1,12 +1,30 @@
 import useTranslation from "next-translate/useTranslation";
 import { TextHeader } from "@components/ui/text-header";
 import { ContactsCard } from "@components/Card/contacts-card";
+import Link from "next/link";
+import { Email } from "../../../components/icons/email";
 
 function Contacts() {
   const { t } = useTranslation("contacts");
   return (
     <>
       <TextHeader>{t("title")}</TextHeader>
+      <div className="card w-full border border-neutral bg-base-100 shadow-sm">
+        <div className="card-body p-5 lg:p-7">
+          <h2 className="card-title">Info</h2>
+          <p className="flex items-center gap-1">
+            <Email />
+            info@lottasvizzera.ch
+          </p>
+          <div className="card-actions justify-end">
+            <Link href="mailto:info@lottasvizzera.ch">
+              <button className="btn btn-neutral" type="button">
+                {t("cta")}
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
       <div className="grid grid-cols-[repeat(auto-fit,_minmax(20rem,_1fr))] gap-2 pt-2">
         <ContactsCard
           action
