@@ -30,6 +30,21 @@ function Documents() {
             </Link>
           </div>
         ))}
+        <div className="my-2 grid grid-cols-[1fr_auto] items-center gap-2">
+          <Link
+            className="btn font-semibold lg:text-lg"
+            href={`/pages/documents/others?lang=${lang}`}
+          >
+            <button type="button">{t("others-documents")}</button>
+          </Link>
+          <Link
+            className="lg:hidden"
+            href={`/pages/documents/others?lang=${lang}`}
+            target="_blank"
+          >
+            <OpenExternal />
+          </Link>
+        </div>
       </ul>
     </>
   );
