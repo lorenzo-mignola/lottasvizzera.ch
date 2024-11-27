@@ -1,12 +1,12 @@
 import useTranslation from "next-translate/useTranslation";
 import { TextHeader } from "@components/ui/text-header";
 import Trans from "next-translate/Trans";
-import { Suspense } from "react";
 import Link from "next/link";
-import { Map } from "./map";
+import Image from "next/image";
+import SectionImage from "@/public/images/mat.jpeg";
 
-export default function Training() {
-  const { t } = useTranslation("training");
+function Mat() {
+  const { t } = useTranslation("mat");
   return (
     <>
       <TextHeader>{t("title")}</TextHeader>
@@ -23,15 +23,12 @@ export default function Training() {
               />
             ),
           }}
-          i18nKey="training:body"
+          i18nKey="mat:body"
         />
       </article>
-
-      <div className="mt-5 h-[600px] w-full xl:h-[900px]">
-        <Suspense>
-          <Map />
-        </Suspense>
-      </div>
+      <Image alt="Tappetone" className="mt-2 w-full" src={SectionImage} />
     </>
   );
 }
+
+export default Mat;

@@ -8,6 +8,7 @@
     "/pages/documents/[year]": ["documents"],
     "/pages/contacts": ["contacts"],
     "/pages/history": ["history"],
-    "/pages/training": ["training"]
+    "/pages/training": ["training"],
+    "/pages/mat": ["mat"]
   }
 }

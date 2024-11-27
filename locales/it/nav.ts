@@ -5,4 +5,5 @@ export const NAV_IT: Record<NavLinks, string> = {
   contacts: "Contatti",
   history: "Storia",
   training: "Allenamenti",
+  mat: "Tappetone",
 };
