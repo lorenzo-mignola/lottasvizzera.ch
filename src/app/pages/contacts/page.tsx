@@ -56,7 +56,7 @@ function Contacts() {
 
       <div className="grid grid-cols-[repeat(auto-fit,_minmax(18rem,_1fr))] gap-2">
         <ContactsCard name="Loris Di Pietro" title={t("president")} />
-        <ContactsCard name="Aurelio Vizzardi" title={t("vicePresident")} />
+        <ContactsCard name="Paolo Donelli" title={t("vicePresident")} />
         <ContactsCard name="Ruth Crotta" title={t("secretary")} />
         <ContactsCard name="Robin Crotta" title={t("technical")} />
         <ContactsCard name="Oscar Facchini" title={t("member")} />
