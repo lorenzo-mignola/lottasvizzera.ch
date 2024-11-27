@@ -3,7 +3,8 @@ import { TextHeader } from "@components/ui/text-header";
 import Trans from "next-translate/Trans";
 import Link from "next/link";
 import Image from "next/image";
-import SectionImage from "@/public/images/mat.jpeg";
+import MatImage from "@/public/images/mat.jpeg";
+import MatSchemaImage from "@/public/images/mat_schema.jpg";
 
 function Mat() {
   const { t } = useTranslation("mat");
@@ -26,7 +27,18 @@ function Mat() {
           i18nKey="mat:body"
         />
       </article>
-      <Image alt="Tappetone" className="mt-2 w-full" src={SectionImage} />
+      <div className="mt-2 flex w-full flex-col items-center gap-4 xl:flex-row">
+        <div className="w-full">
+          <Image alt="Tappetone" className="w-full" src={MatImage} />
+        </div>
+        <div className="w-full">
+          <Image
+            alt="Tappetone Schema"
+            className="w-full"
+            src={MatSchemaImage}
+          />
+        </div>
+      </div>
     </>
   );
 }
