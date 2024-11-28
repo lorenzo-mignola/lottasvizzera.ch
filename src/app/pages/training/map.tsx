@@ -1,13 +1,10 @@
 "use client";
-import useTranslation from "next-translate/useTranslation";
 import React from "react";
 import { getCookieConsentValue } from "react-cookie-consent";
 import { COOKIE_CONSENT } from "@/util/constants";
 import { NoCookie } from "@/src/components/cookie/no-cookie";
 
 export function Map() {
-  const { lang } = useTranslation("training");
-
   const cookieConsent = getCookieConsentValue(COOKIE_CONSENT);
 
   if (cookieConsent === "false") {
@@ -17,8 +14,10 @@ export function Map() {
   return (
     <iframe
       height="100%"
-      src={`https://maps.google.com/maps?&hl=${lang}&q=+(Centro%20Sportivo%20Nazionale%20della%20Giovent%C3%B9)&t=&z=16&ie=UTF8&iwloc=B&output=embed`}
-      title="Centro Sportivo Nazionale della Gioventù"
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.826781966347!2d8.921696200000001!3d46.154195300000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4785caba31a384cf%3A0x8b828c78bc41a70c!2sVia%20Limedi%207%2C%206594%20Contone!5e0!3m2!1sit!2sch!4v1732728558189!5m2!1sit!2sch"
+      title="Via Liemdi 7"
       width="100%"
     />
   );

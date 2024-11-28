@@ -1,1 +1,6 @@
-export type NavLinks = "documents" | "contacts" | "history" | "training";
+export type NavLinks =
+  | "documents"
+  | "contacts"
+  | "history"
+  | "training"
+  | "mat";

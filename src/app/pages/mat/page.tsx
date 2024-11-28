@@ -1,12 +1,13 @@
 import useTranslation from "next-translate/useTranslation";
 import { TextHeader } from "@components/ui/text-header";
 import Trans from "next-translate/Trans";
-import { Suspense } from "react";
 import Link from "next/link";
-import { Map } from "./map";
+import Image from "next/image";
+import MatImage from "@/public/images/mat.jpeg";
+import MatSchemaImage from "@/public/images/mat_schema.jpg";
 
-export default function Training() {
-  const { t } = useTranslation("training");
+function Mat() {
+  const { t } = useTranslation("mat");
   return (
     <>
       <TextHeader>{t("title")}</TextHeader>
@@ -23,15 +24,23 @@ export default function Training() {
               />
             ),
           }}
-          i18nKey="training:body"
+          i18nKey="mat:body"
         />
       </article>
-
-      <div className="mt-5 h-[600px] w-full xl:h-[900px]">
-        <Suspense>
-          <Map />
-        </Suspense>
+      <div className="mt-2 flex w-full flex-col items-center gap-4 xl:flex-row">
+        <div className="w-full">
+          <Image alt="Tappetone" className="w-full" src={MatImage} />
+        </div>
+        <div className="w-full">
+          <Image
+            alt="Tappetone Schema"
+            className="w-full"
+            src={MatSchemaImage}
+          />
+        </div>
       </div>
     </>
   );
 }
+
+export default Mat;
