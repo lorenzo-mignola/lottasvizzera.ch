@@ -8,7 +8,7 @@ export function SectionLotta() {
   const { t } = useTranslation("home");
   return (
     <section
-      className="flex flex-col-reverse bg-base-100 p-5 lg:flex-row lg:items-center lg:p-20"
+      className="flex flex-col-reverse bg-base-100 p-5 lg:flex-row lg:items-center lg:p-20 lg:px-40"
       id="section"
     >
       <Image alt="Lotta svizzera" className="lg:mr-4" src={SectionImage} />

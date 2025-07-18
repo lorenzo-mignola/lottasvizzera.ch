@@ -8,7 +8,7 @@ export function SectionATLS() {
   const { t } = useTranslation("home");
   return (
     <section
-      className="bg-neutral p-5 text-neutral-content lg:flex lg:items-center lg:p-20"
+      className="bg-neutral p-5 text-neutral-content lg:flex lg:items-center lg:p-20 lg:px-40"
       id="section-atls"
     >
       <div>
