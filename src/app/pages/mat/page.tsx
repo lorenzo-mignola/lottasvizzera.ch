@@ -1,8 +1,8 @@
-import useTranslation from "next-translate/useTranslation";
 import { TextHeader } from "@components/ui/text-header";
 import Trans from "next-translate/Trans";
-import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
+import Link from "next/link";
 import MatImage from "@/public/images/mat.jpeg";
 import MatSchemaImage from "@/public/images/mat_schema.jpg";
 
@@ -14,7 +14,6 @@ function Mat() {
       <article>
         <Trans
           components={{
-            // eslint-disable-next-line jsx-a11y/heading-has-content -- not needed
             title: <h2 className="pt-2 text-lg font-bold" />,
             p: <p />,
             link: (

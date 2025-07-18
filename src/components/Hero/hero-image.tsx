@@ -4,5 +4,3 @@ import HomeImage from "@/public/images/home.jpg";
 export function HeroImage() {
   return <Image alt="Hero image" className="rounded-md" src={HomeImage} />;
 }
-
-export const heroImageJPG = HomeImage;

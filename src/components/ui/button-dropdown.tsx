@@ -22,7 +22,6 @@ export function ButtonDropDown({
           handleClick();
         }
       }}
-      // eslint-disable-next-line jsx-a11y/no-noninteractive-element-to-interactive-role -- need to be li for safari
       role="button"
     >
       <span>

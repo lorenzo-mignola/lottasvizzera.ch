@@ -1,8 +1,8 @@
 import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
+import SectionImage from "@/public/images/section-lotta.jpg";
 import { SectionHeader } from "./section-header";
 import { SectionParagraph } from "./section-paragraph";
-import SectionImage from "@/public/images/section-lotta.jpg";
 
 export function SectionLotta() {
   const { t } = useTranslation("home");

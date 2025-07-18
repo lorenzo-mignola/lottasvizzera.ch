@@ -1,5 +1,5 @@
-import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
+import Link from "next/link";
 
 export function HeroText() {
   const { t, lang = "it" } = useTranslation("home");

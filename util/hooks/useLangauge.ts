@@ -3,7 +3,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect } from "react";
 import { COOKIE_KEY, MAX_AGE } from "@/util/constants";
 
-export const useLanguage = (defaultLocale: string) => {
+export function useLanguage(defaultLocale: string) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -23,7 +23,7 @@ export const useLanguage = (defaultLocale: string) => {
   // set user lang in cookie on open
   useEffect(() => {
     if (hasCookie(COOKIE_KEY)) {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion -- checked before
+      // @ts-expect-error -- wrong type
       setLanguage(getCookie(COOKIE_KEY)!);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps -- run only on first render
@@ -33,4 +33,4 @@ export const useLanguage = (defaultLocale: string) => {
     setLanguage,
     lang,
   };
-};
+}

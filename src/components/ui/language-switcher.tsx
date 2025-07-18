@@ -1,10 +1,10 @@
 "use client";
 
+import type { Languages } from "@/types/languages";
 import { Language } from "@components/icons/language";
 import { useRef } from "react";
-import { ButtonDropDown } from "./button-dropdown";
-import type { Languages } from "@/types/languages";
 import { useLanguage } from "@/util/hooks/useLangauge";
+import { ButtonDropDown } from "./button-dropdown";
 
 export function LanguageSwitcher() {
   const { lang, setLanguage } = useLanguage("it");

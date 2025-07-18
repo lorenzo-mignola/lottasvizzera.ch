@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { getCookieConsentValue } from "react-cookie-consent";
-import { COOKIE_CONSENT } from "@/util/constants";
 import { NoCookie } from "@/src/components/cookie/no-cookie";
+import { COOKIE_CONSENT } from "@/util/constants";
 
 export function Map() {
   const cookieConsent = getCookieConsentValue(COOKIE_CONSENT);
@@ -13,6 +13,7 @@ export function Map() {
 
   return (
     <iframe
+      sandbox=""
       height="100%"
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"

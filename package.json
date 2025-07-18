@@ -2,49 +2,49 @@
   "name": "lottasvizzera.ch",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "export": "next build && next export",
     "start": "next start",
-    "lint": "next lint --fix",
+    "lint": "eslint --fix",
     "prepare": "husky"
   },
   "dependencies": {
     "@types/node": "^24.0.14",
-    "@types/react": "^18.3.23",
-    "@types/react-dom": "^18.3.7",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
     "autoprefixer": "^10.4.21",
-    "cookies-next": "^4.3.0",
+    "cookies-next": "^6.1.0",
     "daisyui": "^4.12.24",
-    "eslint": "^8.57.1",
-    "eslint-config-next": "13.5.11",
-    "next": "^14.2.30",
-    "next-translate": "^2.6.2",
-    "next-translate-plugin": "^2.6.2",
+    "next": "15.4.1",
+    "next-translate": "^3.0.0-canary.5",
     "postcss": "^8.5.6",
-    "react": "18.3.1",
+    "react": "19.1.0",
     "react-cookie-consent": "^9.0.0",
-    "react-dom": "18.3.1",
-    "sharp": "^0.33.5",
+    "react-dom": "19.1.0",
+    "sharp": "^0.34.3",
     "tailwindcss": "^3.4.17",
     "typescript": "5.8.3"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^4.17.0",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@next/eslint-plugin-next": "^13.5.11",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "@vercel/style-guide": "^5.2.0",
-    "eslint-config-prettier": "^9.1.1",
-    "eslint-plugin-prettier": "^5.5.1",
-    "eslint-plugin-tailwindcss": "^3.18.2",
+    "@eslint-react/eslint-plugin": "^1.52.3",
+    "eslint": "^9.31.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.2",
+    "lint-staged": "^16.1.2",
+    "next-translate-plugin": "^3.0.0-canary.5",
     "prettier": "3.6.2"
   },
-  "engines": {
-    "node": ">=22.0.0"
+  "overrides": {
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6"
   }
 }

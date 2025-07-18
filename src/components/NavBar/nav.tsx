@@ -1,9 +1,9 @@
 "use client";
 
 import { Suspense } from "react";
+import { DrawerContextProvider } from "@/util/hooks/DrawerContextProvider";
 import { LanguageSwitcher } from "../ui/language-switcher";
 import { Drawer } from "./drawer";
-import { DrawerContextProvider } from "@/util/hooks/DrawerContext";
 
 export function Nav() {
   return (

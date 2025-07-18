@@ -1,6 +1,6 @@
-import useTranslation from "next-translate/useTranslation";
 import { TextHeader } from "@components/ui/text-header";
 import Trans from "next-translate/Trans";
+import useTranslation from "next-translate/useTranslation";
 
 export default function History() {
   const { t } = useTranslation("history");
@@ -9,8 +9,10 @@ export default function History() {
       <TextHeader>{t("title")}</TextHeader>
       <article>
         <Trans
-          // eslint-disable-next-line react/jsx-key, jsx-a11y/heading-has-content -- not needed
-          components={[<h2 className="pt-2 text-lg font-bold" />, <p />]}
+          components={[
+            <h2 className="pt-2 text-lg font-bold" key="h2" />,
+            <p key="p" />,
+          ]}
           i18nKey="history:body"
         />
       </article>

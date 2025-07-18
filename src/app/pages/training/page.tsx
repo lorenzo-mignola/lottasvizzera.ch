@@ -1,8 +1,8 @@
-import useTranslation from "next-translate/useTranslation";
 import { TextHeader } from "@components/ui/text-header";
 import Trans from "next-translate/Trans";
-import { Suspense } from "react";
+import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
+import { Suspense } from "react";
 import { Map } from "./map";
 
 export default function Training() {
@@ -13,7 +13,6 @@ export default function Training() {
       <article>
         <Trans
           components={{
-            // eslint-disable-next-line jsx-a11y/heading-has-content -- not needed
             title: <h2 className="pt-2 text-lg font-bold" />,
             p: <p />,
             link: (

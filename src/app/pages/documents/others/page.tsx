@@ -1,28 +1,25 @@
+import type { Languages } from "@/types/languages";
+import { Folder } from "@components/icons/folder";
+import { TextHeader } from "@components/ui/text-header";
 import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
-import { TextHeader } from "@components/ui/text-header";
-import { Folder } from "@components/icons/folder";
-import { Suspense } from "react";
+import { Suspense, use } from "react";
 import { DriveDocuments } from "../[year]/drive-documents";
-import type { Languages } from "@/types/languages";
 
 const DRIVE_OTHERS_IT = "1K-xluIi8GH7pdmjGothJAWzYkjQC6NE9";
 const DRIVE_OTHERS_DE = "106ImfYYOWQDZnb8vMBsxmqrqEfp0ZHuz";
 
-const folderIds = {
-  it: DRIVE_OTHERS_IT,
-  de: DRIVE_OTHERS_DE,
-};
+const folderIds = { it: DRIVE_OTHERS_IT, de: DRIVE_OTHERS_DE };
 
-interface DocumentYearPage {
-  searchParams: {
-    lang: Languages;
-  };
+interface OtherPageProps {
+  searchParams: Promise<{ lang: Languages }>;
 }
 
-export default function DocumentYearPage({
-  searchParams: { lang },
-}: DocumentYearPage) {
+export default function OtherPage(props: OtherPageProps) {
+  const searchParams = use(props.searchParams);
+
+  const { lang } = searchParams;
+
   const { t } = useTranslation("documents");
 
   if (!["it", "de"].includes(lang)) {

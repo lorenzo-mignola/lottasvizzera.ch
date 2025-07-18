@@ -1,11 +1,10 @@
+import type { PropsWithChildren } from "react";
+import type { NavLinks } from "@/types/nav-links";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
-import type { PropsWithChildren } from "react";
-import { useContext } from "react";
 import { NAV_DE } from "@/locales/de/nav";
 import { NAV_IT } from "@/locales/it/nav";
 import { DrawerContext } from "@/util/hooks/DrawerContext";
-import type { NavLinks } from "@/types/nav-links";
 
 const LOCALE = {
   it: NAV_IT,
@@ -19,7 +18,7 @@ interface PageLinkProps {
 type NavLocale = keyof typeof LOCALE;
 
 export function PageLink({ id }: PropsWithChildren<PageLinkProps>) {
-  const { closeDrawer } = useContext(DrawerContext);
+  const { closeDrawer } = use(DrawerContext);
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
