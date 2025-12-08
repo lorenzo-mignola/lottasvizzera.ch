@@ -1,4 +1,5 @@
 import type { PropsWithChildren } from "react";
+import { use } from "react";
 import type { NavLinks } from "@/types/nav-links";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";

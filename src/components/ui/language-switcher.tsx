@@ -23,7 +23,7 @@ export function LanguageSwitcher() {
         className="btn m-1 border-transparent bg-transparent shadow-none"
         ref={dropDownRef}
       >
-        <span className="flex gap-1">
+        <span className="flex gap-1 items-center">
           <Language />
           {lang.toUpperCase()}
         </span>

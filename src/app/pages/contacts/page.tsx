@@ -3,9 +3,10 @@ import { TextHeader } from "@components/ui/text-header";
 import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import { Email } from "../../../components/icons/email";
+import { getT } from "../../i18n/server";
 
-function Contacts() {
-  const { t } = useTranslation("contacts");
+async function Contacts() {
+  const { t } = await getT("contacts");
   return (
     <>
       <TextHeader>{t("title")}</TextHeader>
@@ -25,7 +26,7 @@ function Contacts() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-[repeat(auto-fit,_minmax(20rem,_1fr))] gap-2 pt-2">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-2 pt-2">
         <ContactsCard
           action
           address="6597 Agarone, Via Cà di Sopra 10"

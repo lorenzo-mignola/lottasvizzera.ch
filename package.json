@@ -14,37 +14,40 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@types/node": "^24.0.14",
-    "@types/react": "19.1.8",
-    "@types/react-dom": "19.1.6",
-    "autoprefixer": "^10.4.21",
-    "cookies-next": "^6.1.0",
-    "daisyui": "^4.12.24",
-    "next": "15.4.1",
-    "next-translate": "^3.0.0-canary.5",
-    "postcss": "^8.5.6",
-    "react": "19.1.0",
+    "@tailwindcss/postcss": "^4.1.17",
+    "@types/node": "^24.10.1",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "accept-language": "^3.0.20",
+    "autoprefixer": "^10.4.22",
+    "cookies-next": "^6.1.1",
+    "daisyui": "^5.5.8",
+    "i18next-browser-languagedetector": "^8.2.0",
+    "i18next-resources-to-backend": "^1.2.1",
+    "next": "^15.5.7",
+    "react": "19.2.1",
     "react-cookie-consent": "^9.0.0",
-    "react-dom": "19.1.0",
-    "sharp": "^0.34.3",
-    "tailwindcss": "^3.4.17",
-    "typescript": "5.8.3"
+    "react-dom": "19.2.1",
+    "react-i18next": "^16.4.0",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.1.17",
+    "typescript": "5.9.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.17.0",
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
-    "@eslint-react/eslint-plugin": "^1.52.3",
-    "eslint": "^9.31.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
+    "@antfu/eslint-config": "^6.4.2",
+    "@commitlint/cli": "^20.2.0",
+    "@commitlint/config-conventional": "^20.2.0",
+    "@eslint-react/eslint-plugin": "^2.3.12",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
     "husky": "^9.1.7",
-    "lint-staged": "^16.1.2",
-    "next-translate-plugin": "^3.0.0-canary.5",
-    "prettier": "3.6.2"
+    "lint-staged": "^16.2.7",
+    "prettier": "3.7.4"
   },
   "overrides": {
-    "@types/react": "19.1.8",
-    "@types/react-dom": "19.1.6"
-  }
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3"
+  },
+  "browserslist": "> 1%"
 }

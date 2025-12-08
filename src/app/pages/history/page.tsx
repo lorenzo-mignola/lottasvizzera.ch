@@ -1,9 +1,10 @@
+"use client";
 import { TextHeader } from "@components/ui/text-header";
-import Trans from "next-translate/Trans";
-import useTranslation from "next-translate/useTranslation";
+import { Trans } from "react-i18next";
+import { useT } from "../../i18n/client";
 
 export default function History() {
-  const { t } = useTranslation("history");
+  const { t } = useT("history");
   return (
     <>
       <TextHeader>{t("title")}</TextHeader>

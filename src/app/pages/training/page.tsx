@@ -1,12 +1,13 @@
+"use client";
 import { TextHeader } from "@components/ui/text-header";
-import Trans from "next-translate/Trans";
-import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import { Suspense } from "react";
 import { Map } from "./map";
+import { useT } from "../../i18n/client";
+import { Trans } from "react-i18next";
 
 export default function Training() {
-  const { t } = useTranslation("training");
+  const { t } = useT("training");
   return (
     <>
       <TextHeader>{t("title")}</TextHeader>

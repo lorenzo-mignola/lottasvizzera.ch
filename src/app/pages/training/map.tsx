@@ -13,7 +13,7 @@ export function Map() {
 
   return (
     <iframe
-      sandbox=""
+      sandbox="allow-scripts"
       height="100%"
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"

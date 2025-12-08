@@ -1,13 +1,14 @@
+"use client";
 import { TextHeader } from "@components/ui/text-header";
-import Trans from "next-translate/Trans";
-import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
 import MatImage from "@/public/images/mat.jpeg";
 import MatSchemaImage from "@/public/images/mat_schema.jpg";
+import { useT } from "../../i18n/client";
+import { Trans } from "react-i18next";
 
 function Mat() {
-  const { t } = useTranslation("mat");
+  const { t } = useT("mat");
   return (
     <>
       <TextHeader>{t("title")}</TextHeader>

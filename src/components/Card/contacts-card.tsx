@@ -1,8 +1,8 @@
-import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import { Address } from "../icons/address";
 import { Email } from "../icons/email";
 import { Phone } from "../icons/phone";
+import { getT } from "@/src/app/i18n/server";
 
 interface ContactsCardProps {
   title: string;
@@ -13,7 +13,7 @@ interface ContactsCardProps {
   action?: boolean;
 }
 
-export function ContactsCard({
+export async function ContactsCard({
   title,
   name,
   email,
@@ -21,7 +21,7 @@ export function ContactsCard({
   address,
   action = false,
 }: ContactsCardProps) {
-  const { t } = useTranslation("contacts");
+  const { t } = await getT("contacts");
   return (
     <div className="card w-full border border-neutral bg-base-100 shadow-sm">
       <div className="card-body p-5 lg:p-7">
