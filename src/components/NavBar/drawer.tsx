@@ -1,11 +1,11 @@
-import { useContext } from "react";
-import { DrawerLg } from "./drawer-lg";
-import { DrawerMd } from "./drawer-md";
+import { use } from "react";
 import { DRAWER_ID } from "@/util/constants";
 import { DrawerContext } from "@/util/hooks/DrawerContext";
+import { DrawerLg } from "./drawer-lg";
+import { DrawerMd } from "./drawer-md";
 
 export function Drawer() {
-  const { drawer } = useContext(DrawerContext);
+  const { drawer } = use(DrawerContext);
   return (
     <>
       <input

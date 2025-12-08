@@ -3,9 +3,10 @@ import useTranslation from "next-translate/useTranslation";
 import React from "react";
 import CookieConsentBanner from "react-cookie-consent";
 import { COOKIE_CONSENT, MAX_AGE } from "@/util/constants";
+import { useT } from "../../app/i18n/client";
 
 export function CookieConsent() {
-  const { t } = useTranslation("cookie");
+  const { t } = useT("cookie");
 
   return (
     <CookieConsentBanner

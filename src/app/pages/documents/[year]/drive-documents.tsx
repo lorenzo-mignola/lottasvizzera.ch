@@ -1,7 +1,7 @@
 "use client";
 import { getCookieConsentValue } from "react-cookie-consent";
-import { COOKIE_CONSENT } from "@/util/constants";
 import { NoCookie } from "@/src/components/cookie/no-cookie";
+import { COOKIE_CONSENT } from "@/util/constants";
 
 interface DriveDocumentsProps {
   src: string;
@@ -17,6 +17,7 @@ export function DriveDocuments({ src, year }: DriveDocumentsProps) {
 
   return (
     <iframe
+      sandbox=""
       className="min-h-[60vh]"
       src={src}
       title={`doc-${year}`}

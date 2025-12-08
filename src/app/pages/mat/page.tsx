@@ -1,20 +1,20 @@
-import useTranslation from "next-translate/useTranslation";
+"use client";
 import { TextHeader } from "@components/ui/text-header";
-import Trans from "next-translate/Trans";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import MatImage from "@/public/images/mat.jpeg";
 import MatSchemaImage from "@/public/images/mat_schema.jpg";
+import { useT } from "../../i18n/client";
+import { Trans } from "react-i18next";
 
 function Mat() {
-  const { t } = useTranslation("mat");
+  const { t } = useT("mat");
   return (
     <>
       <TextHeader>{t("title")}</TextHeader>
       <article>
         <Trans
           components={{
-            // eslint-disable-next-line jsx-a11y/heading-has-content -- not needed
             title: <h2 className="pt-2 text-lg font-bold" />,
             p: <p />,
             link: (

@@ -1,11 +1,11 @@
-import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
+import SectionImage from "@/public/images/section-lotta.jpg";
 import { SectionHeader } from "./section-header";
 import { SectionParagraph } from "./section-paragraph";
-import SectionImage from "@/public/images/section-lotta.jpg";
+import { getT } from "@/src/app/i18n/server";
 
-export function SectionLotta() {
-  const { t } = useTranslation("home");
+export async function SectionLotta() {
+  const { t } = await getT("home");
   return (
     <section
       className="flex flex-col-reverse bg-base-100 p-5 lg:flex-row lg:items-center lg:p-20 lg:px-40"

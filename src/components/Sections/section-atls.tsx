@@ -1,11 +1,12 @@
 import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
+import SectionImage from "@/public/images/section-atls.jpg";
 import { SectionHeader } from "./section-header";
 import { SectionParagraph } from "./section-paragraph";
-import SectionImage from "@/public/images/section-atls.jpg";
+import { getT } from "../../app/i18n/server";
 
-export function SectionATLS() {
-  const { t } = useTranslation("home");
+export async function SectionATLS() {
+  const { t } = await getT("home");
   return (
     <section
       className="bg-neutral p-5 text-neutral-content lg:flex lg:items-center lg:p-20 lg:px-40"

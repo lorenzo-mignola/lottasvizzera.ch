@@ -1,4 +1,4 @@
-import { heroImageJPG } from "./hero-image";
+import { heroImageJPG } from "./hero-image-jpg";
 import { HeroText } from "./hero-text";
 
 export function HeroLg() {

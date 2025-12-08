@@ -1,8 +1,11 @@
-import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
+import Link from "next/link";
+import { useT } from "../../app/i18n/client";
+import { getT } from "../../app/i18n/server";
 
-export function HeroText() {
-  const { t, lang = "it" } = useTranslation("home");
+export async function HeroText() {
+  const { t, i18n } = await getT("home");
+  const lang = i18n.resolvedLanguage;
 
   return (
     <div>

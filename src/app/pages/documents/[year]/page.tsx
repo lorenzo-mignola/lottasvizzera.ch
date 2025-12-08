@@ -1,26 +1,27 @@
+import type { Years } from "../drive-pages";
+import type { Languages } from "@/types/languages";
+import { Folder } from "@components/icons/folder";
+import { TextHeader } from "@components/ui/text-header";
 import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
-import { TextHeader } from "@components/ui/text-header";
-import { Folder } from "@components/icons/folder";
-import { Suspense } from "react";
-import type { Years } from "../drive-pages";
+import { Suspense, use } from "react";
 import { documentsPages } from "../drive-pages";
 import { DriveDocuments } from "./drive-documents";
-import type { Languages } from "@/types/languages";
 
-interface DocumentYearPage {
-  params: {
-    year: Years;
-  };
-  searchParams: {
-    lang: Languages;
-  };
+interface DocumentYearPageProps {
+  params: Promise<{ year: Years }>;
+  searchParams: Promise<{ lang: Languages }>;
 }
 
-export default function DocumentYearPage({
-  params: { year },
-  searchParams: { lang },
-}: DocumentYearPage) {
+export default function DocumentYearPage(props: DocumentYearPageProps) {
+  const searchParams = use(props.searchParams);
+
+  const { lang } = searchParams;
+
+  const params = use(props.params);
+
+  const { year } = params;
+
   const { t } = useTranslation("documents");
   const folderId = documentsPages[year][lang];
   const src = `https://drive.google.com/embeddedfolderview?id=${folderId}#list`;

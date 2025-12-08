@@ -1,11 +1,13 @@
+import { OpenExternal } from "@components/icons/open-external";
+import { TextHeader } from "@components/ui/text-header";
 import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
-import { TextHeader } from "@components/ui/text-header";
-import { OpenExternal } from "@components/icons/open-external";
 import { years } from "./drive-pages";
+import { getT } from "../../i18n/server";
 
-function Documents() {
-  const { t, lang } = useTranslation("documents");
+async function Documents() {
+  const { t, i18n } = await getT("documents");
+  const lang = i18n.resolvedLanguage;
   return (
     <>
       <TextHeader>{t("title")}</TextHeader>

@@ -1,7 +1,7 @@
 import { setCookie } from "cookies-next";
 import useTranslation from "next-translate/useTranslation";
-import React from "react";
 import { useRouter } from "next/navigation";
+import React from "react";
 import { COOKIE_CONSENT, MAX_AGE } from "@/util/constants";
 
 export function NoCookie() {
