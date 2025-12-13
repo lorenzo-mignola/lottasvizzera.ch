@@ -1,22 +1,14 @@
-"use client";
 import { TextHeader } from "@components/ui/text-header";
-import { Trans } from "react-i18next";
-import { useT } from "../../i18n/client";
+import { getT } from "../../i18n/server";
+import HistoryContent from "./history-content";
 
-export default function History() {
-  const { t } = useT("history");
+export default async function History() {
+  const { t } = await getT("history");
+
   return (
     <>
       <TextHeader>{t("title")}</TextHeader>
-      <article>
-        <Trans
-          components={[
-            <h2 className="pt-2 text-lg font-bold" key="h2" />,
-            <p key="p" />,
-          ]}
-          i18nKey="history:body"
-        />
-      </article>
+      <HistoryContent />
     </>
   );
 }

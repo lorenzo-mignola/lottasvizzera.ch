@@ -5,7 +5,7 @@ import { PageLink } from "./page-link";
 
 export function Pages() {
   return (
-    <Suspense>
+    <Suspense fallback={<div></div>}>
       <li>
         <Logo classes="lg:hidden" />
       </li>

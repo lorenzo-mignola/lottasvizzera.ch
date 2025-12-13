@@ -12,7 +12,10 @@ export function useT(ns: any, options?: UseTranslationOptions<undefined>) {
   const lang = queryParams.get("lang") || fallbackLng;
 
   useEffect(() => {
-    if (!lang || i18next.resolvedLanguage === lang) return;
+    if (!lang || i18next.resolvedLanguage === lang) {
+      return;
+    }
+
     i18next.changeLanguage(lang);
   }, [lang]);
 

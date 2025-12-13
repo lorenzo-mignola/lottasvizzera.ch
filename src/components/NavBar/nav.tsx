@@ -1,5 +1,4 @@
 "use client";
-
 import { Suspense } from "react";
 import { DrawerContextProvider } from "@/util/hooks/DrawerContextProvider";
 import { LanguageSwitcher } from "../ui/language-switcher";
@@ -13,7 +12,7 @@ export function Nav() {
           <Drawer />
         </div>
       </DrawerContextProvider>
-      <Suspense>
+      <Suspense fallback={<div></div>}>
         <LanguageSwitcher />
       </Suspense>
     </nav>

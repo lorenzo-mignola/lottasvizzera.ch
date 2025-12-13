@@ -1,3 +1,4 @@
+"use client";
 import type { PropsWithChildren } from "react";
 import type { NavLinks } from "@/types/nav-links";
 import Link from "next/link";

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Footer } from "@components/Footer/footer";
 import { Nav } from "@components/NavBar/nav";
 import { Inter } from "next/font/google";
+import { Suspense } from "react";
 import { CookieConsent } from "../components/cookie/cookie-consent";
 import "./globals.css";
 
@@ -43,7 +44,9 @@ export default function RootLayout({
         <Nav />
         {children}
         <Footer />
-        <CookieConsent />
+        <Suspense fallback={<div></div>}>
+          <CookieConsent />
+        </Suspense>
       </body>
     </html>
   );

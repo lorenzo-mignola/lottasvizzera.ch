@@ -27,9 +27,7 @@ export default function DocumentYearPage(props: DocumentYearPageProps) {
 
   return (
     <>
-      <TextHeader>
-        {t("title")} {year}
-      </TextHeader>
+      <TextHeader>{`${t("title")} ${year}`}</TextHeader>
       <div className="breadcrumbs pb-4 text-sm">
         <ul>
           <li>
