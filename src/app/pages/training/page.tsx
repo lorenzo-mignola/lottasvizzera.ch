@@ -2,9 +2,9 @@
 import { TextHeader } from "@components/ui/text-header";
 import Link from "next/link";
 import { Suspense } from "react";
-import { Map } from "./map";
-import { useT } from "../../i18n/client";
 import { Trans } from "react-i18next";
+import { useT } from "../../i18n/client";
+import { Map } from "./map";
 
 export default function Training() {
   const { t } = useT("training");

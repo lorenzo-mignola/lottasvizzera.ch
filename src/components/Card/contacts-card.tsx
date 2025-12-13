@@ -1,8 +1,8 @@
 import Link from "next/link";
+import { getT } from "@/src/app/i18n/server";
 import { Address } from "../icons/address";
 import { Email } from "../icons/email";
 import { Phone } from "../icons/phone";
-import { getT } from "@/src/app/i18n/server";
 
 interface ContactsCardProps {
   title: string;

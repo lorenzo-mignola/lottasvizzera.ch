@@ -1,10 +1,11 @@
-import { NextRequest, NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 import acceptLanguage from "accept-language";
+import { NextResponse } from "next/server";
 import {
-  fallbackLng,
-  languages,
   cookieName,
+  fallbackLng,
   headerName,
+  languages,
 } from "./app/i18n/settings";
 
 acceptLanguage.languages(languages);
@@ -19,13 +20,13 @@ export const config = {
 export function proxy(req: NextRequest) {
   // Ignore paths with "icon" or "chrome"
   if (
-    req.nextUrl.pathname.indexOf("icon") > -1 ||
-    req.nextUrl.pathname.indexOf("chrome") > -1
+    req.nextUrl.pathname.includes("icon") ||
+    req.nextUrl.pathname.includes("chrome")
   ) {
     return NextResponse.next();
   }
 
-  let lng = getLang(req);
+  const lng = getLang(req);
 
   // Check if the language is already in the path
   const lngInPath = languages.find((loc) =>

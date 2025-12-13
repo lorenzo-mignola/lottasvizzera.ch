@@ -1,6 +1,5 @@
 import { ContactsCard } from "@components/Card/contacts-card";
 import { TextHeader } from "@components/ui/text-header";
-import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import { Email } from "../../../components/icons/email";
 import { getT } from "../../i18n/server";

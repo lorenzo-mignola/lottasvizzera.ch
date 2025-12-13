@@ -1,9 +1,8 @@
 import { OpenExternal } from "@components/icons/open-external";
 import { TextHeader } from "@components/ui/text-header";
-import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
-import { years } from "./drive-pages";
 import { getT } from "../../i18n/server";
+import { years } from "./drive-pages";
 
 async function Documents() {
   const { t, i18n } = await getT("documents");

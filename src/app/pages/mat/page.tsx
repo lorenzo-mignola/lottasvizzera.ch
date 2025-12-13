@@ -2,10 +2,10 @@
 import { TextHeader } from "@components/ui/text-header";
 import Image from "next/image";
 import Link from "next/link";
+import { Trans } from "react-i18next";
 import MatImage from "@/public/images/mat.jpeg";
 import MatSchemaImage from "@/public/images/mat_schema.jpg";
 import { useT } from "../../i18n/client";
-import { Trans } from "react-i18next";
 
 function Mat() {
   const { t } = useT("mat");
