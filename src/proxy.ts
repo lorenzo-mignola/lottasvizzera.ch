@@ -35,13 +35,6 @@ export function proxy(req: NextRequest) {
   const headers = new Headers(req.headers);
   headers.set(headerName, lngInPath || lng);
 
-  // If the language is not in the path, redirect to include it
-  if (!lngInPath && !req.nextUrl.pathname.startsWith("/_next")) {
-    return NextResponse.redirect(
-      new URL(`/${lng}${req.nextUrl.pathname}${req.nextUrl.search}`, req.url),
-    );
-  }
-
   // If a referer exists, try to detect the language from there and set the cookie accordingly
   if (req.headers.has("referer")) {
     const refererUrl = new URL(req.headers.get("referer") ?? "");

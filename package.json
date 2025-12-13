@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=24.0.0"
+    "node": "24"
   },
   "scripts": {
     "dev": "next dev --turbopack",
@@ -24,7 +24,7 @@
     "daisyui": "^5.5.13",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-resources-to-backend": "^1.2.1",
-    "next": "^15.5.9",
+    "next": "16.0.10",
     "react": "19.2.3",
     "react-cookie-consent": "^9.0.0",
     "react-dom": "19.2.3",
@@ -38,7 +38,7 @@
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
     "@eslint-react/eslint-plugin": "^2.3.13",
-    "@next/eslint-plugin-next": "^16.0.10",
+    "@next/eslint-plugin-next": "16.0.10",
     "eslint": "^9.39.2",
     "eslint-plugin-format": "^1.1.0",
     "eslint-plugin-react-hooks": "^7.0.1",
