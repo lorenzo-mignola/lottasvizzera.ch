@@ -1,5 +1,4 @@
 "use client";
-import useTranslation from "next-translate/useTranslation";
 import React from "react";
 import CookieConsentBanner from "react-cookie-consent";
 import { COOKIE_CONSENT, MAX_AGE } from "@/util/constants";

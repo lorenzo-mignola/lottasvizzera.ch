@@ -1,10 +1,11 @@
-import { NextRequest, NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 import acceptLanguage from "accept-language";
+import { NextResponse } from "next/server";
 import {
-  fallbackLng,
-  languages,
   cookieName,
+  fallbackLng,
   headerName,
+  languages,
 } from "./app/i18n/settings";
 
 acceptLanguage.languages(languages);
@@ -19,16 +20,16 @@ export const config = {
 export function proxy(req: NextRequest) {
   // Ignore paths with "icon" or "chrome"
   if (
-    req.nextUrl.pathname.indexOf("icon") > -1 ||
-    req.nextUrl.pathname.indexOf("chrome") > -1
+    req.nextUrl.pathname.includes("icon")
+    || req.nextUrl.pathname.includes("chrome")
   ) {
     return NextResponse.next();
   }
 
-  let lng = getLang(req);
+  const lng = getLang(req);
 
   // Check if the language is already in the path
-  const lngInPath = languages.find((loc) =>
+  const lngInPath = languages.find(loc =>
     req.nextUrl.pathname.startsWith(`/${loc}`),
   );
   const headers = new Headers(req.headers);
@@ -44,11 +45,12 @@ export function proxy(req: NextRequest) {
   // If a referer exists, try to detect the language from there and set the cookie accordingly
   if (req.headers.has("referer")) {
     const refererUrl = new URL(req.headers.get("referer") ?? "");
-    const lngInReferer = languages.find((l) =>
+    const lngInReferer = languages.find(l =>
       refererUrl.pathname.startsWith(`/${l}`),
     );
     const response = NextResponse.next({ headers });
-    if (lngInReferer) response.cookies.set(cookieName, lngInReferer);
+    if (lngInReferer)
+      response.cookies.set(cookieName, lngInReferer);
     return response;
   }
 

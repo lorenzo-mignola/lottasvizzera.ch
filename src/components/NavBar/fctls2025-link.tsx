@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
@@ -12,7 +13,7 @@ export function FCTLS2025Link() {
         href="https://www.fctls.ch/"
         target="_blank"
       >
-        {lang === "it" ? "FCTLS" : "TKSF"} 2025
+        {`${lang === "it" ? "FCTLS" : "TKSF"} 2025`}
       </Link>
     </li>
   );

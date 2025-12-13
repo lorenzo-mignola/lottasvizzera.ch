@@ -1,6 +1,4 @@
-import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
-import { useT } from "../../app/i18n/client";
 import { getT } from "../../app/i18n/server";
 
 export async function HeroText() {

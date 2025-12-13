@@ -1,9 +1,8 @@
-import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
 import SectionImage from "@/public/images/section-atls.jpg";
+import { getT } from "../../app/i18n/server";
 import { SectionHeader } from "./section-header";
 import { SectionParagraph } from "./section-paragraph";
-import { getT } from "../../app/i18n/server";
 
 export async function SectionATLS() {
   const { t } = await getT("home");

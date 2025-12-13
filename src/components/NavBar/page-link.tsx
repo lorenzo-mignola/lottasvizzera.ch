@@ -1,8 +1,9 @@
+"use client";
 import type { PropsWithChildren } from "react";
-import { use } from "react";
 import type { NavLinks } from "@/types/nav-links";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
+import { use } from "react";
 import { NAV_DE } from "@/locales/de/nav";
 import { NAV_IT } from "@/locales/it/nav";
 import { DrawerContext } from "@/util/hooks/DrawerContext";

@@ -1,7 +1,7 @@
-import { UseTranslationOptions } from "react-i18next";
+import type { UseTranslationOptions } from "react-i18next";
+import { cookies } from "next/headers";
 import i18next from "./i18next";
-import { fallbackLng, cookieName } from "./settings";
-import { cookies, headers } from "next/headers";
+import { cookieName, fallbackLng } from "./settings";
 
 export async function getT(
   ns: any,

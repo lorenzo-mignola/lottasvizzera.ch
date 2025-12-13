@@ -1,8 +1,8 @@
 import Image from "next/image";
 import SectionImage from "@/public/images/section-lotta.jpg";
+import { getT } from "@/src/app/i18n/server";
 import { SectionHeader } from "./section-header";
 import { SectionParagraph } from "./section-paragraph";
-import { getT } from "@/src/app/i18n/server";
 
 export async function SectionLotta() {
   const { t } = await getT("home");

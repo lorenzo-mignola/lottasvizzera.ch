@@ -1,9 +1,10 @@
+"use client";
 import type { Languages } from "@/types/languages";
 import { Folder } from "@components/icons/folder";
 import { TextHeader } from "@components/ui/text-header";
-import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import { Suspense, use } from "react";
+import { useT } from "../../../i18n/client";
 import { DriveDocuments } from "../[year]/drive-documents";
 
 const DRIVE_OTHERS_IT = "1K-xluIi8GH7pdmjGothJAWzYkjQC6NE9";
@@ -20,7 +21,7 @@ export default function OtherPage(props: OtherPageProps) {
 
   const { lang } = searchParams;
 
-  const { t } = useTranslation("documents");
+  const { t } = useT("documents");
 
   if (!["it", "de"].includes(lang)) {
     return null;

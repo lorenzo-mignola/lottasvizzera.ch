@@ -1,9 +1,8 @@
 import { OpenExternal } from "@components/icons/open-external";
 import { TextHeader } from "@components/ui/text-header";
-import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
-import { years } from "./drive-pages";
 import { getT } from "../../i18n/server";
+import { years } from "./drive-pages";
 
 async function Documents() {
   const { t, i18n } = await getT("documents");
@@ -12,7 +11,7 @@ async function Documents() {
     <>
       <TextHeader>{t("title")}</TextHeader>
       <ul className="grid-cols-3 gap-4 lg:grid">
-        {years.map((year) => (
+        {years.map(year => (
           <div
             className="my-2 grid grid-cols-[1fr_auto] items-center gap-2"
             key={year}
