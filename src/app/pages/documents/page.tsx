@@ -11,7 +11,7 @@ async function Documents() {
     <>
       <TextHeader>{t("title")}</TextHeader>
       <ul className="grid-cols-3 gap-4 lg:grid">
-        {years.map((year) => (
+        {years.map(year => (
           <div
             className="my-2 grid grid-cols-[1fr_auto] items-center gap-2"
             key={year}

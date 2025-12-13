@@ -27,33 +27,41 @@ export async function ContactsCard({
       <div className="card-body p-5 lg:p-7">
         <h2 className="card-title">{title}</h2>
         <h3>{name}</h3>
-        {email ? (
-          <p className="flex items-center gap-1">
-            <Email />
-            {email}
-          </p>
-        ) : null}
-        {phone ? (
-          <p className="flex items-center gap-1">
-            <Phone />
-            {phone}
-          </p>
-        ) : null}
-        {address ? (
-          <p className="flex items-center gap-1">
-            <Address />
-            {address}
-          </p>
-        ) : null}
-        {action && email ? (
-          <div className="card-actions justify-end">
-            <Link href={`mailto:${email}`}>
-              <button className="btn btn-neutral" type="button">
-                {t("cta")}
-              </button>
-            </Link>
-          </div>
-        ) : null}
+        {email
+          ? (
+              <p className="flex items-center gap-1">
+                <Email />
+                {email}
+              </p>
+            )
+          : null}
+        {phone
+          ? (
+              <p className="flex items-center gap-1">
+                <Phone />
+                {phone}
+              </p>
+            )
+          : null}
+        {address
+          ? (
+              <p className="flex items-center gap-1">
+                <Address />
+                {address}
+              </p>
+            )
+          : null}
+        {action && email
+          ? (
+              <div className="card-actions justify-end">
+                <Link href={`mailto:${email}`}>
+                  <button className="btn btn-neutral" type="button">
+                    {t("cta")}
+                  </button>
+                </Link>
+              </div>
+            )
+          : null}
       </div>
     </div>
   );
