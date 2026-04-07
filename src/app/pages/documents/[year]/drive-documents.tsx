@@ -17,7 +17,7 @@ export function DriveDocuments({ src, year }: DriveDocumentsProps) {
 
   return (
     <iframe
-      sandbox="allow-scripts"
+      sandbox="allow-scripts allow-popups allow-same-origin"
       className="min-h-[60vh]"
       src={src}
       title={`doc-${year}`}
