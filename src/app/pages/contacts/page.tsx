@@ -50,6 +50,14 @@ async function Contacts() {
           phone="+41 77 419 29 81"
           title={t("technical")}
         />
+        <ContactsCard
+          action
+          email="sviluppo@lottasvizzera.ch"
+          name="Boris Baroni"
+          phone="+41 76 305 95 76"
+          title={t("development")}
+          spacing
+        />
       </div>
       <div className="divider" />
       <h2 className="pb-1 text-lg font-bold">Comitato</h2>

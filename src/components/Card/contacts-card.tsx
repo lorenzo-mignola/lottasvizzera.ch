@@ -3,6 +3,7 @@ import { getT } from "@/src/app/i18n/server";
 import { Address } from "../icons/address";
 import { Email } from "../icons/email";
 import { Phone } from "../icons/phone";
+import Spacing from "./spacing";
 
 interface ContactsCardProps {
   title: string;
@@ -11,6 +12,7 @@ interface ContactsCardProps {
   phone?: string;
   address?: string;
   action?: boolean;
+  spacing?: boolean;
 }
 
 export async function ContactsCard({
@@ -20,6 +22,7 @@ export async function ContactsCard({
   phone,
   address,
   action = false,
+  spacing = false,
 }: ContactsCardProps) {
   const { t } = await getT("contacts");
   return (
@@ -34,7 +37,7 @@ export async function ContactsCard({
                 {email}
               </p>
             )
-          : null}
+          : <Spacing spacing={spacing} />}
         {phone
           ? (
               <p className="flex items-center gap-1">
@@ -42,7 +45,7 @@ export async function ContactsCard({
                 {phone}
               </p>
             )
-          : null}
+          : <Spacing spacing={spacing} />}
         {address
           ? (
               <p className="flex items-center gap-1">
@@ -50,7 +53,7 @@ export async function ContactsCard({
                 {address}
               </p>
             )
-          : null}
+          : <Spacing spacing={spacing} />}
         {action && email
           ? (
               <div className="card-actions justify-end">
