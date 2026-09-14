@@ -1,11 +1,16 @@
 "use client";
-import React from "react";
+import { usePathname } from "next/navigation";
 import CookieConsentBanner from "react-cookie-consent";
 import { COOKIE_CONSENT, MAX_AGE } from "@/util/constants";
 import { useT } from "../../app/i18n/client";
 
 export function CookieConsent() {
   const { t } = useT("cookie");
+  const pathname = usePathname();
+
+  if (pathname !== "/pages/training") {
+    return null;
+  }
 
   return (
     <CookieConsentBanner

@@ -1,6 +1,7 @@
 import { TextHeader } from "@components/ui/text-header";
 import { Suspense } from "react";
 import { getT } from "../../i18n/server";
+import { CMFGMap } from "./cmfg-map";
 import { Map } from "./map";
 import TrainingContent from "./training-content";
 
@@ -11,6 +12,7 @@ export default async function Training() {
     <>
       <TextHeader>{t("title")}</TextHeader>
       <TrainingContent />
+      <CMFGMap />
       <div className="mt-5 h-[600px] w-full xl:h-[900px]">
         <Suspense>
           <Map />
